@@ -19,4 +19,6 @@ public class StudentInfoRequest implements Serializable {
     private String cid;
     @NotNull
     private String name;
+    @NotNull
+    private int score;
 }

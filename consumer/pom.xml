@@ -11,6 +11,10 @@
 
     <artifactId>consumer</artifactId>
 
+    <properties>
+        <camunda.dmn.version>7.9.0</camunda.dmn.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.man</groupId>
@@ -55,6 +59,13 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
+        <!-- DMN -->
+        <dependency>
+            <groupId>org.camunda.bpm.dmn</groupId>
+            <artifactId>camunda-engine-dmn</artifactId>
+            <version>${camunda.dmn.version}</version>
         </dependency>
 
     </dependencies>

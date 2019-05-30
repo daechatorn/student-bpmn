@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="Definitions_168lmhc" name="DRD" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="studentGradeRules" name="Student Grade">
+    <decisionTable id="decisionTable_1">
+      <input id="input_1">
+        <inputExpression id="inputExpression_1" typeRef="long">
+          <text>score</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_15xvxsv" label="special_activity">
+        <inputExpression id="LiteralExpression_07v1vgn" typeRef="boolean">
+          <text>special_activity</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1wnvxj7" label="good_student">
+        <inputExpression id="LiteralExpression_0nbhyz0" typeRef="string">
+          <text>good_student</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="grade_en" name="grade_en" typeRef="string" />
+      <output id="OutputClause_0razq47" label="grade_th" name="grade_th" typeRef="integer" />
+      <rule id="DecisionRule_0x19eiv">
+        <inputEntry id="UnaryTests_0wwdiak">
+          <text>[90..100]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0exwzvj">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jof01k">
+          <text>"Y"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ekyccw">
+          <text>"A"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mnescv">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0z0iang">
+        <inputEntry id="UnaryTests_1nazkkd">
+          <text>[80..100]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07lyar3">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06szdfw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07wumax">
+          <text>"A"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ucsop2">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
